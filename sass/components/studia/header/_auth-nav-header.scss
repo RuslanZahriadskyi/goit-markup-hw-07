@@ -1,0 +1,28 @@
+@import "../../../utils/mixin-header";
+@import "../../../utils/mixin-svg";
+
+.auth-nav {
+	display: flex;
+	margin-left: auto;
+
+	& .item + .item {
+		margin-left: 50px;
+	}
+
+	& .link:hover,
+	.link:focus {
+		color: $acent-color;
+	}
+
+	& .link {
+		@include NavigationLink($secondary-text-color);
+	}
+}
+
+.e-mail {
+	@include SvgHeader(16px, 17.2px);
+}
+
+.smartphone {
+	@include SvgHeader(20px, 15px);
+}
