@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&family=Roboto:wght@400;500;700;900&display=swap");
 /*! modern-normalize v0.7.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -1230,6 +1231,15 @@ a {
   z-index: -1;
   width: 100%;
   border-bottom: 1px solid #ececec;
+}
+
+.container.header .flex-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .list.button {

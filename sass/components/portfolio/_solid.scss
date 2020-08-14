@@ -12,4 +12,9 @@
 
 		border-bottom: 1px solid #ececec;
 	}
+
+	& .flex-header {
+		display: flex;
+		align-items: center;
+	}
 }
