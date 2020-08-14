@@ -12,11 +12,11 @@
 
 		border-bottom: 1px solid #ececec;
 	}
-}
 
-.flex-header {
-	display: flex;
-	align-items: center;
+	& .flex-header {
+		display: flex;
+		align-items: center;
+	}
 }
 
 .logo-header {
@@ -25,8 +25,8 @@
 	margin-right: 85px;
 
 	color: $primary-text-color;
-}
 
-.logo-nav {
-	@include logoSpan($acent-color);
+	& .logo-nav {
+		@include logoSpan($acent-color);
+	}
 }

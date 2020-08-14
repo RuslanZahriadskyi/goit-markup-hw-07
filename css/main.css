@@ -322,7 +322,7 @@ a {
   border-bottom: 1px solid #ececec;
 }
 
-.flex-header {
+.container.studio .flex-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,7 +336,7 @@ a {
   color: #212121;
 }
 
-.logo-nav {
+.logo-header .logo-nav {
   color: #2196f3;
 }
 
