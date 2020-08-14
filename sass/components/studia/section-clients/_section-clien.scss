@@ -1,0 +1,36 @@
+.section-title.clients {
+	padding-top: 94px;
+}
+
+.section.list.clients {
+	& .item.clients {
+		@include displayFlex;
+		width: calc((1170px - 150px) / 6);
+		height: 90px;
+		margin-right: 30px;
+	}
+
+	&:last-child {
+		margin-right: 0px;
+	}
+}
+
+.company {
+	@include displayFlex;
+	width: 170px;
+	height: 90px;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #afb1b8;
+	border-radius: 4px;
+	fill: #afb1b8;
+
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		fill: #2196f3;
+		border: 1px solid #2196f3;
+		outline: none;
+	}
+}

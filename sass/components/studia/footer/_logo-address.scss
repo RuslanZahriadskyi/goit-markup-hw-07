@@ -1,0 +1,50 @@
+
+.logo-footer {
+	@extend %logo;
+	display: inline-block;
+	padding-top: 60px;
+	margin-bottom: 20px;
+	color: $primary-bg-color;
+
+	& .logo-span {
+		color: $acent-color;
+	}
+}
+
+.full-address {
+	width: 231px;
+	height: 81px;
+
+	& .address {
+		display: inline-block;
+		margin-top: 0px;
+		margin-bottom: 9px;
+
+		color: $primary-bg-color;
+		font-size: 14px;
+		line-height: 1.7;
+		font-style: normal;
+	}
+
+	& .footer-link {
+		display: inline-block;
+		color: rgba(255, 255, 255, 0.6);
+		margin-bottom: 9px;
+
+		font-size: 14px;
+		line-height: 1.7;
+		font-style: normal;
+
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:hover,
+		&:focus {
+			color: $acent-color;
+			outline: none;
+		}
+	}
+}
