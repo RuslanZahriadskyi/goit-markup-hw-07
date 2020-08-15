@@ -17,3 +17,10 @@
 @mixin logoSpan($color) {
 	color: $color;
 }
+
+@mixin headerSolid($px, $color) {
+	border: $px solid $color;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+}

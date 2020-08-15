@@ -7,6 +7,7 @@ Document
 /**
 Use a better box model (opinionated).
 */
+*,
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
@@ -259,6 +260,13 @@ a {
   text-decoration: none;
 }
 
+*,
+::after,
+::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -277,16 +285,7 @@ a {
   list-style: none;
 }
 
-.section-title {
-  margin-top: 0;
-  margin-bottom: 50px;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-}
-
-.logo-header, .logo-footer {
+.header .logo-header, .logo-footer {
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -309,36 +308,38 @@ a {
   outline: none;
 }
 
-.container.studio {
-  position: relative;
+.section-title-tasks, .section-team .section-title-team, .section.clients .title-clients {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
 }
 
-.container.studio::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  width: 100%;
-  border-bottom: 1px solid #ececec;
+.header {
+  border: 1px solid #ececec;
+  border-left: none;
+  border-right: none;
+  border-top: none;
 }
 
-.container.studio .flex-header {
+.header .logo-header {
+  margin-right: 85px;
+  color: #212121;
+}
+
+.header .logo-header .logo-nav {
+  color: #2196f3;
+}
+
+.flex-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.logo-header {
-  margin-right: 85px;
-  color: #212121;
-}
-
-.logo-header .logo-nav {
-  color: #2196f3;
 }
 
 .site-nav {
@@ -385,6 +386,7 @@ a {
   width: 100%;
   height: 4px;
   border-radius: 2px;
+  bottom: -1px;
   background-color: #2196f3;
   opacity: 0;
 }
@@ -711,20 +713,23 @@ a {
   fill: currentColor;
 }
 
-.section-title.clients {
+.section.clients {
   padding-top: 94px;
 }
 
-.section.list.clients .item.clients {
+.section.clients .list.clients {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.section.clients .list.clients .item.clients {
   width: calc((1170px - 150px) / 6);
   height: 90px;
   margin-right: 30px;
 }
 
-.section.list.clients:last-child {
+.section.clients .list.clients:last-child {
   margin-right: 0px;
 }
 
@@ -860,7 +865,6 @@ a {
 .item-links-footer {
   display: block;
   margin-right: 10px;
-  margin-bottom: 24px;
 }
 
 .item-links-footer .social-links-footer {
@@ -875,7 +879,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1217,29 +1221,6 @@ a {
   width: 18px;
   height: 18px;
   fill: currentColor;
-}
-
-.container.header {
-  position: relative;
-}
-
-.container.header::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  width: 100%;
-  border-bottom: 1px solid #ececec;
-}
-
-.container.header .flex-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .list.button {

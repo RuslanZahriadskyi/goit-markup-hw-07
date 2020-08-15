@@ -2,6 +2,10 @@
 	padding-top: 94px;
 	padding-bottom: 94px;
 	background-color: $secondary-bg-color;
+
+	& .section-title-team {
+		@extend %section-title;
+	}
 }
 
 .section.list {
